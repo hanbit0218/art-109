@@ -1,0 +1,55 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+   font-size: 1.6rem;
+  /* font-size 1.6rem is now the same as 16px */
+  line-height: 1.6;
+}
+
+@keyframes stretching {
+  0% {
+    width: 100px;
+    height: auto;
+  }
+  100% {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+
+.button {
+  background-color: rgb(121, 220, 96);
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+  margin: 5px 5px 5px 5px;
+  letter-spacing: 10px;
+  
+  animation-name: stretching;
+  animation-duration: 6s;
+}
