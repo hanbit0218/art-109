@@ -6,27 +6,21 @@
   <title>Resume | David Song | Student and Artist</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <!-- Intro -->
-  <header>
+<body class="resume">
+  <a class="btn download-link" href="david_song_resume.pdf">Download PDF</a>
+  
+  <div class="resume-container">
+    <img src="images/office-banner.jpg" alt="greenery" class="resume-image">
     <h1>David Song</h1>
-    <h2>Student and Artist</h2>
-  </header>
-
-  <!-- Main -->
-  <main>
-    <section class="resume-section">
-      <h2>Profile</h2>
-      <p>[ RESUME / SUMMARIES ]</p>
-      <a href="index.html">back to homepage</a>
-    </section>
-
-    <!-- Projets -->
-    <section>
+    <h3>Student and Artist</h3>
+    <a class="home-link resume-btn" href="index.html">&lt&lt &nbsp&nbsp&nbspH O M E&nbsp&nbsp&nbsp P A G E</a>
+    
+     <!-- PROJECTS -->
+     <section class="resume-section">
       <h2>Projects</h2>
       <p>[ OPTIONAL PARAGRAPH FOR PROJECTS SUMAMRY ]</p>
 
-      <section>
+      <section class=".project-item">
         <img src="images/hydrosense-500px.jpg" srcset="images/hydrosense-1000px.jpg 2x" alt="HydroSense" width="300px" height="300px">
         <h3>HydroSense</h3>
         <ul>
@@ -39,8 +33,26 @@
       </section>
     </section>
 
-    <!-- Work -->
-    <section>
+    <!-- WORK EXPERIENCE -->
+    <section class="resume-section">
+      <h2>Work Experience</h2>
+      <p>[ OPTIONAL PARAGRAPH FOR WORK EXPERIENCE SUMMARY ]</p>
+
+      <section>
+        <h3>Software Engineer Intern</h3>
+        <p>Life Stages</p>
+        <p>May 2024 - Jul 2024</p>
+        <ul>
+          <li>Engineered RESTful APIs in Node.js and Express.js to analyze user behavior, improving content personalization and retention rates by 20%</li>
+          <li>Collaborated with DevOps engineers to implement CI/CD pipelines, reducing deployment errors by 30%</li>
+          <li>Supported backend services that facilitated seamless data communication across platforms</li>
+          <li>Tech Stack: Node.js, Express.js, RESTful APIs, Git, CI/CD</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATION -->
+    <section class="resume-section">
       <h2>Work Experience</h2>
       <p>[ OPTIONAL PARAGRAPH FOR WORK EXPERIENCE SUMMARY ]</p>
 
@@ -57,19 +69,26 @@
       </section>
     </section>
   </main>
+  </div>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 by David Song | <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a></p>
-
+  <footer id="footer">
+    <p>© 2025 by David Song |&nbsp; <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a></p>
     <ul class="socials">
       <li>
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank"></a><img src="images/linkedin.png" alt="My LinkedIn" width="50px" height="50px">
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank"></a><img src="images/linkedin.png" alt="My LinkedIn" width="50px" height="50px">
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank"></a><img src="images/linkedin.png" alt="My LinkedIn" width="50px" height="50px">
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank"></a><img src="images/linkedin.png" alt="My LinkedIn" width="50px" height="50px">
+        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">
+          <img src="images/linkedin.png" alt="My LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="images/instagram.png" alt="My Instagram">
+        </a>
+        <a href="https://discord.com/" target="_blank">
+          <img src="images/discord.png" alt="My Discord">
+        </a>
       </li>
     </ul>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
