@@ -3,54 +3,320 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Song | Student and Artist</title>
+  <meta name="description" content="David Song - Software Developer, Student and Artist showcasing creative projects and technical skills">
+  <meta name="keywords" content="David Song, portfolio, software developer, artist, student, web development">
+  <title>David Song | Software Developer</title>
   <link rel="stylesheet" href="css/styles.css">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="home">
-  <!-- Intro -->
-  <div class="content-wrapper">
-    <div class="content-bg">
-      <header>
-        <h1 class="noti">David Song</h1>
-        <h2 class="noti">Student and Artist</h2>
-      </header>
-
-      <!-- About Me -->
-      <main>
-        <p class="noti">I'm a creative thinker with a passion for both technology and the arts. I enjoy drawing as a way to explore ideas visually, whether for UI designs or conceptual projects. My interests include exploring archives through a techno/socio/cultural lens, particularly in relation to critical fabulation and imaginary archives. I’m always looking for ways to combine creativity with problem-solving, both in programming and in artistic endeavors.</p>
-        <p class="noti">To learn more about my work history, check out my<br><br></p>
-        <div class="btndiv">
-          <a class="resume-btn" href="resume.html">R E S U M E &nbsp&nbsp&nbsp&gt&gt</a>
-        </div>
-        <p class="noti"><br>Thanks for stopping by!</p>
-
-        <p class="noti">[ move cursor to bottom of page to see credentials + socials ]</p>
-      </main>
+<body>
+  <nav id="main-nav">
+    <div class="container">
+      <div class="logo">DS</div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
     </div>
-  </div>
+  </nav>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <p>© 2025 by David Song |&nbsp; <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a></p>
-    <ul class="socials">
-      <li>
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">
-          <img src="images/linkedin.png" alt="My LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src="images/instagram.png" alt="My Instagram">
-        </a>
-        <a href="https://discord.com/" target="_blank">
-          <img src="images/discord.png" alt="My Discord">
-        </a>
-      </li>
-    </ul>
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>David <span>Song</span></h1>
+        <h2>Software Developer & Creative Thinker</h2>
+        <p>Building digital experiences that blend technology with artistic vision</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="images/profile.jpg" alt="David Song" id="profile-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a creative thinker with a passion for both technology and the arts. Currently pursuing a B.S. in Computer Science at San José State University, I combine technical expertise with artistic vision to create meaningful digital experiences.</p>
+          
+          <div class="bio-toggle" id="bio-toggle">Read More</div>
+          
+          <div class="bio-extended" id="bio-extended">
+            <p>My interests include exploring archives through a techno/socio/cultural lens, particularly in relation to critical fabulation and imaginary archives. I'm always looking for ways to combine creativity with problem-solving, both in programming and in artistic endeavors.</p>
+            
+            <p>I enjoy drawing as a way to explore ideas visually, whether for UI designs or conceptual projects. This multidisciplinary approach allows me to bring unique perspectives to my software development work.</p>
+          </div>
+        </div>
+        
+        <div class="skills">
+          <h3>Technical Skills</h3>
+          <div class="skill-groups">
+            <div class="skill-group">
+              <h4>Languages</h4>
+              <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Frameworks</h4>
+              <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Next.js</li>
+                <li>Django</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Tools</h4>
+              <ul>
+                <li>Git</li>
+                <li>Docker</li>
+                <li>Firebase</li>
+                <li>AWS</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="project-grid">
+        <div class="project-card" id="project1">
+          <div class="project-img">
+            <img src="images/hydrosense-500px.jpg" alt="HydroSense Project">
+          </div>
+          <div class="project-info">
+            <h3>HydroSense</h3>
+            <p>An IoT-based dashboard for real-time soil moisture monitoring and analytics.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank" class="btn small-btn">View Code</a>
+              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" id="project2">
+          <div class="project-img">
+            <img src="images/office-banner.jpg" alt="Sales Forecast Project">
+          </div>
+          <div class="project-info">
+            <h3>Sales Forecast</h3>
+            <p>A sales forecasting model using Python and Scikit-learn for inventory optimization.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Scikit-learn</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hanbit0218/sales_forecast.git" target="_blank" class="btn small-btn">View Code</a>
+              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card" id="project3">
+          <div class="project-img">
+            <img src="images/office.jpg" alt="Energy Dashboard Project">
+          </div>
+          <div class="project-info">
+            <h3>Energy Dashboard</h3>
+            <p>A backend solution to process energy data, enabling real-time forecasting and analytics.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>TensorFlow</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hanbit0218/energy_dashboard.git" target="_blank" class="btn small-btn">View Code</a>
+              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume">
+    <div class="container">
+      <div class="section-header">
+        <h2>Experience & Education</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="resume-content">
+        <div class="resume-download">
+          <a href="david_song_resume.pdf" class="btn primary-btn" target="_blank">Download Full Resume</a>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jul 2024 - Aug 2024</div>
+            <div class="timeline-content">
+              <h3>Software Engineer Fellow</h3>
+              <h4>Headstarter AI</h4>
+              <p>Designed and deployed a scalable inventory-management system and AI-powered chatbot.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">May 2024 - Jul 2024</div>
+            <div class="timeline-content">
+              <h3>Software Engineer Intern</h3>
+              <h4>Life Stages</h4>
+              <p>Engineered RESTful APIs in Node.js and Express.js to analyze user behavior.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Expected Dec 2025</div>
+            <div class="timeline-content">
+              <h3>B.S., Computer Science</h3>
+              <h4>San José State University</h4>
+              <p>Coursework: Object-Oriented Programming, Data Structures, AI, Machine Learning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Feel free to reach out for collaboration opportunities or just to say hello!</p>
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <a href="tel:6692361331">(669) 236-1331</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🔗</div>
+              <div class="contact-details">
+                <h4>Social</h4>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">LinkedIn</a>
+                  <a href="https://github.com/hanbit0218" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">DS</div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/hanbit0218" target="_blank">
+            <img src="images/github.png" alt="GitHub">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 David Song. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="scroll-to-top" id="scroll-to-top">
+    <span>↑</span>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

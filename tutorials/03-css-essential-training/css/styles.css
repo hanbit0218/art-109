@@ -33,11 +33,38 @@ html, body {
 body {
   background: #f6f6f6;
   margin: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background: #222222;
+  color: #f6f6f6;
+}
+
+body.dark-theme .content-bg {
+  background: rgba(34, 34, 34, 0.9);
+  color: #f6f6f6;
+  box-shadow: 0 0px 30px rgba(60, 132, 83, 0.7);
+}
+
+body.dark-theme a {
+  color: #bcaa96;
+}
+
+body.dark-theme a:hover {
+  color: #3c8453;
+}
+
+body.dark-theme .resume-btn {
+  background-color: rgba(34, 34, 34, 0.5);
+  color: #f6f6f6;
 }
 
 /* links */
 a {
   color: #3c8453;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
@@ -57,6 +84,12 @@ footer a:hover {
   background-color: #3c8453;
   color: #f6f6f6;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .content-wrapper {
@@ -85,10 +118,17 @@ footer a:hover {
 }
 
 .content-bg {
-  background: rgba(255 255 255 / 0.8);
+  background: rgba(255, 255, 255, 0.8);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0px 30px rgba(78, 78, 78, 0.9);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+header {
+  transition: background-color 0.5s ease;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .btndiv {
@@ -129,8 +169,40 @@ footer a:hover {
   width: 100%;
   border: 0px solid red;
   text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Bio sections */
+.bio-section {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  display: none;
+}
+
+/* Toggle buttons */
+.toggle-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3c8453;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #bcaa96;
+  transform: translateY(-2px);
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
 
 /* RESUME
 -------------------------------------*/
@@ -149,14 +221,6 @@ footer a:hover {
 
 .resume .content-wrapper {
   flex: 1 0 auto;
-}
-
-.content-bg {
-  background: rgba(255 255 255 / 0.8);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0px 30px rgba(78, 78, 78, 0.9);
-
 }
 
 .resume header::before {
@@ -184,9 +248,6 @@ footer a:hover {
   position:absolute;
   top: 30px;
 }
-
-
-
 
 .resume-container {
   border: 1px solid red;
@@ -219,6 +280,12 @@ footer a:hover {
   width: 300px;
   float: left;
   margin-right: 20px;
+  cursor: pointer;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
 }
 
 /* PROJECTS
@@ -268,10 +335,69 @@ footer {
 
 .socials img {
   width: 32px;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .socials img:hover {
   opacity: 0.5;
   cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* IMAGE GRID
+-------------------------------------*/
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* MEDIA QUERIES
+-------------------------------------*/
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    padding: 15px;
+  }
+  
+  .resume-btn {
+    width: 250px;
+  }
+  
+  .project-item img {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .socials {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .resume-btn {
+    width: 200px;
+    font-size: 14px;
+  }
 }
