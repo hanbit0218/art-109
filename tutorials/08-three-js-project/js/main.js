@@ -27,7 +27,7 @@ document.body.appendChild(renderer.domElement);
 const controls = new OrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader(); // to load 3d models
 
-loader.load('tutorials/08-three-js-project/model/dog_shiny.gltf', function (gltf){
+loader.load('../model/dog_shiny.gltf', function (gltf){
     const animal = gltf.scene;
     scene.add(animal);
     animal.scale.set(4, 4, 4);
