@@ -7,11 +7,13 @@
   <meta name="keywords" content="David Song, resume, software developer, React, JavaScript, web development, San José State University">
   <meta name="author" content="David Song">
   <title>Resume | David Song - Software Developer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
+  <div id="p5-container"></div>
+
   <header class="header">
     <div class="container">
       <nav class="navbar">
@@ -28,7 +30,6 @@
   </header>
 
   <div class="content-wrapper">
-    <!-- Resume Content -->
     <section class="resume-page">
       <div class="container">
         <div class="resume-header">
@@ -46,7 +47,6 @@
         </div>
         
         <div class="resume-content">
-          <!-- Education -->
           <div class="resume-section">
             <h2>Education</h2>
             <div class="resume-item">
@@ -60,7 +60,6 @@
             </div>
           </div>
           
-          <!-- Experience -->
           <div class="resume-section">
             <h2>Experience</h2>
             
@@ -93,7 +92,6 @@
             </div>
           </div>
           
-          <!-- Projects -->
           <div class="resume-section">
             <h2>Projects</h2>
             
@@ -148,7 +146,6 @@
             </div>
           </div>
           
-          <!-- Skills -->
           <div class="resume-section">
             <h2>Skills</h2>
             <div class="skills-grid">
@@ -171,7 +168,6 @@
     </section>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2025 David Song. All rights reserved.</p>
@@ -183,12 +179,12 @@
     </div>
   </footer>
 
-  <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
     <span class="close-lightbox">&times;</span>
     <img class="lightbox-content" id="lightbox-img" alt="Enlarged resume image">
   </div>
 
   <script src="js/script.js"></script>
+  <script src="js/sketch.js"></script>
 </body>
 </html>
