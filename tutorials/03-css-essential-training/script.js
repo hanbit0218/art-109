@@ -1,42 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Create mobile menu toggle
-    const createMobileMenu = function() {
-      const menuToggle = document.createElement('div');
-      menuToggle.className = 'menu-toggle';
-      menuToggle.innerHTML = '<span></span><span></span><span></span>';
-      
-      const navLinks = document.querySelector('.nav-links');
-      const navbar = document.querySelector('.navbar');
-      
-      // Only add mobile menu functionality if we're on a small screen
-      if (window.innerWidth <= 768) {
-        // Insert before the theme button
-        const themeBtn = document.querySelector('.theme-btn');
-        if (themeBtn) {
-          navbar.insertBefore(menuToggle, themeBtn);
-        } else {
-          navbar.appendChild(menuToggle);
-        }
-        
-        menuToggle.addEventListener('click', function() {
-          this.classList.toggle('active');
-          navLinks.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-item').forEach(link => {
-          link.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-          });
-        });
-      }
-    };
+  // Mobile menu toggle
+  function setupMobileMenu() {
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<span></span><span></span><span></span>';
     
-    // Execute mobile menu creation
-    createMobileMenu();
+    const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
     
-    // Highlight active nav item based on scroll position
+    // Only add mobile menu functionality if we're on a small screen
+    if (window.innerWidth <= 768) {
+      navbar.appendChild(menuToggle);
+      
+      menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', function() {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  }
+  
+  // Highlight active nav item based on scroll position
+  function setupScrollHighlight() {
     const sections = document.querySelectorAll('section[id]');
     const navItems = document.querySelectorAll('.nav-item');
     
@@ -59,35 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
-    // Add scroll event listener for nav highlighting
     window.addEventListener('scroll', highlightNavItem);
-    
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    
-    if (themeToggle) {
-      // Check for saved theme preference
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeToggle.querySelector('.theme-icon').textContent = '☀️';
-      }
-      
-      themeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-        
-        // Update icon and save preference
-        if (document.body.classList.contains('dark-theme')) {
-          themeToggle.querySelector('.theme-icon').textContent = '☀️';
-          localStorage.setItem('theme', 'dark');
-        } else {
-          themeToggle.querySelector('.theme-icon').textContent = '🌙';
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    }
-    
-    // Form submission
+  }
+  
+  // Contact form submission
+  function setupContactForm() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -96,8 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.reset();
       });
     }
-    
-    // Resume image enlarge
+  }
+  
+  // Resume image enlarge
+  function setupResumeImages() {
     const resumeImages = document.querySelectorAll('.resume-img');
     if (resumeImages.length > 0) {
       resumeImages.forEach(img => {
@@ -116,8 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     }
-    
-    // Smooth scrolling for anchor links
+  }
+  
+  // Smooth scrolling for anchor links
+  function setupSmoothScrolling() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
       link.addEventListener('click', function(e) {
@@ -136,11 +108,109 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
+  }
+  
+  // Style change with timer
+  function setupStyleTimers() {
+    setTimeout(function() {
+      const pageTitle = document.querySelector('.hero-content h1');
+      if (pageTitle) {
+        pageTitle.style.color = "#3c8453";
+        console.log("Title color changed after 2 seconds");
+      }
+    }, 2000);
     
-    // Add simple animation to project cards
+    // Style change with click
+    const header = document.querySelector('.header');
+    if (header) {
+      header.addEventListener('click', function() {
+        document.querySelector('body').classList.toggle('clicked-header');
+        console.log("Clicked header");
+      });
+    }
+  }
+  
+  // Toggle visibility on project images
+  function setupImageToggles() {
+    const projectImages = document.querySelectorAll('.project-card img');
+    projectImages.forEach(img => {
+      img.addEventListener('click', function() {
+        this.classList.toggle('hidden-image');
+        if (this.classList.contains('hidden-image')) {
+          this.style.opacity = '0.2';
+        } else {
+          this.style.opacity = '1';
+        }
+      });
+    });
+  }
+  
+  // Add hover effect using JS
+  function setupLogoHover() {
+    const logo = document.querySelector('.logo');
+    if (logo) {
+      logo.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+      });
+      
+      logo.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+    }
+  }
+  
+  // Add animation to project cards
+  function setupProjectCards() {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
       card.style.animationDelay = `${index * 0.1}s`;
       card.classList.add('fade-in');
     });
-  });
+  }
+  
+  // Lightbox functionality
+  function setupLightbox() {
+    const projectImages = document.querySelectorAll('.project-card img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.querySelector('.close-lightbox');
+    
+    if (!lightbox || !lightboxImg || !closeLightbox) {
+      console.error('Lightbox elements not found');
+      return;
+    }
+    
+    projectImages.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('dblclick', function() {
+        lightbox.style.display = 'block';
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+      });
+    });
+    
+    closeLightbox.addEventListener('click', function() {
+      lightbox.style.display = 'none';
+    });
+    
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === this) {
+        lightbox.style.display = 'none';
+      }
+    });
+  }
+  
+  // Initialize all functions
+  setupMobileMenu();
+  setupScrollHighlight();
+  setupContactForm();
+  setupResumeImages();
+  setupSmoothScrolling();
+  setupStyleTimers();
+  setupImageToggles();
+  setupLogoHover();
+  setupProjectCards();
+  setupLightbox();
+  
+  console.log('All scripts initialized successfully');
+});

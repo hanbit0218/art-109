@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="David Song - Software Developer, Student and Artist">
-  <meta name="keywords" content="David Song, portfolio, software developer, React, JavaScript">
-  <title>David Song | Portfolio</title>
+  <meta name="description" content="David Song - Software Developer specializing in React, JavaScript, and full-stack web development. View my projects and skills.">
+  <meta name="keywords" content="David Song, portfolio, software developer, React, JavaScript, web development, full-stack, San José State University">
+  <meta name="author" content="David Song">
+  <title>David Song | Software Developer & Creative Thinker | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -22,209 +23,208 @@
           <li><a href="resume.html" class="nav-item">Resume</a></li>
           <li><a href="#contact" class="nav-item">Contact</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
-          <span class="theme-icon">🌙</span>
-        </button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>David <span>Song</span></h1>
-        <h2>Software Developer & Creative Thinker</h2>
-        <p>Building digital experiences that blend technology with artistic vision</p>
-        <div class="buttons">
-          <a href="#projects" class="btn primary-btn">View My Work</a>
-          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+  <div class="content-wrapper">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>David <span>Song</span></h1>
+          <h2>Software Developer & Creative Thinker</h2>
+          <p>Building digital experiences that blend technology with artistic vision</p>
+          <div class="buttons">
+            <a href="#projects" class="btn primary-btn">View My Work</a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/profile.jpg" alt="David Song - Software Developer and Creative Thinker" class="hero-profile-image">
         </div>
       </div>
-      <div class="hero-image">
-        <img src="images/profile.jpg" alt="David Song">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>I'm a Computer Science student at San José State University with a passion for web development and creating user-centered digital experiences. I specialize in building full-stack applications using modern JavaScript frameworks and libraries.</p>
-          <p>My approach combines technical expertise with creative thinking to develop solutions that are both functional and visually appealing. I'm particularly interested in creating responsive web applications that provide seamless experiences across all devices.</p>
-        </div>
-        <div class="skills">
-          <h3>Technical Skills</h3>
-          <div class="skill-container">
-            <div class="skill-category">
-              <h4>Programming</h4>
-              <ul>
-                <li>JavaScript (ES6+)</li>
-                <li>TypeScript</li>
-                <li>HTML5/CSS3</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h4>Frameworks</h4>
-              <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>Next.js</li>
-                <li>Tailwind CSS</li>
-                <li>MongoDB</li>
-              </ul>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>I'm a Computer Science student at San José State University with a passion for web development and creating user-centered digital experiences. I specialize in building full-stack applications using modern JavaScript frameworks and libraries.</p>
+            <p>My approach combines technical expertise with creative thinking to develop solutions that are both functional and visually appealing. I'm particularly interested in creating responsive web applications that provide seamless experiences across all devices.</p>
+          </div>
+          <div class="skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-container">
+              <div class="skill-category">
+                <h4>Programming</h4>
+                <ul>
+                  <li>JavaScript (ES6+)</li>
+                  <li>TypeScript</li>
+                  <li>HTML5/CSS3</li>
+                  <li>Python</li>
+                  <li>Java</li>
+                  <li>SQL</li>
+                </ul>
+              </div>
+              <div class="skill-category">
+                <h4>Frameworks</h4>
+                <ul>
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>Express.js</li>
+                  <li>Next.js</li>
+                  <li>Tailwind CSS</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="project-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <img src="images/zaiku.jpg" alt="Zaiku Project">
-          <div class="project-info">
-            <h3>Zaiku</h3>
-            <p>A full-stack e-commerce platform for Asian-inspired fashion with features like shopping cart, search functionality, and secure checkout.</p>
-            <div class="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
-              <span>Express</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/hanbit0218/zaiku.git" target="_blank" class="btn small-btn">GitHub</a>
-              <a href="https://www.zaikuofficial.com/" target="_blank" class="btn small-btn">Live Demo</a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card">
-          <img src="images/promptwave.jpg" alt="PromptWave Project">
-          <div class="project-info">
-            <h3>PromptWave</h3>
-            <p>A React-based chatbot application leveraging Hugging Face AI models, enabling users to interact with different language models.</p>
-            <div class="project-tags">
-              <span>React</span>
-              <span>Express.js</span>
-              <span>Hugging Face API</span>
-              <span>Vercel</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/hanbit0218/promptwave" target="_blank" class="btn small-btn">GitHub</a>
-              <a href="https://promptwave-frontend.vercel.app/" target="_blank" class="btn small-btn">Live Demo</a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="images/zaiku.png" alt="Zaiku - E-commerce Platform Project by David Song" class="project-thumbnail">
+            <div class="project-info">
+              <h3>Zaiku</h3>
+              <p>A full-stack e-commerce platform for Asian-inspired fashion with features like shopping cart, search functionality, and secure checkout.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Express</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hanbit0218/zaiku.git" target="_blank" class="btn small-btn">GitHub</a>
+                <a href="https://www.zaikuofficial.com/" target="_blank" class="btn small-btn">Live Demo</a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project-card">
-          <img src="images/hydrosense-500px.jpg" alt="HydroSense Project">
-          <div class="project-info">
-            <h3>HydroSense</h3>
-            <p>An IoT-based dashboard for SJSU Community Garden's soil moisture monitoring system with data visualization and export capabilities.</p>
-            <div class="project-tags">
-              <span>Next.js</span>
-              <span>React</span>
-              <span>Tailwind CSS</span>
-              <span>Firebase</span>
+          
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img src="images/promptwave.png" alt="PromptWave - AI Chatbot Project by David Song" class="project-thumbnail">
+            <div class="project-info">
+              <h3>PromptWave</h3>
+              <p>A React-based chatbot application leveraging Hugging Face AI models, enabling users to interact with different language models.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Express.js</span>
+                <span>Hugging Face API</span>
+                <span>Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hanbit0218/promptwave" target="_blank" class="btn small-btn">GitHub</a>
+                <a href="https://promptwave-frontend.vercel.app/" target="_blank" class="btn small-btn">Live Demo</a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank" class="btn small-btn">View Code</a>
+          </div>
+          
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img src="images/hydrosense-500px.jpg" alt="HydroSense - IoT Dashboard Project by David Song" class="project-thumbnail">
+            <div class="project-info">
+              <h3>HydroSense</h3>
+              <p>An IoT-based dashboard for SJSU Community Garden's soil moisture monitoring system with data visualization and export capabilities.</p>
+              <div class="project-tags">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>Tailwind CSS</span>
+                <span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank" class="btn small-btn">View Code</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="experience">
-    <div class="container">
-      <h2 class="section-title">Work Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Software Engineer Fellow</h3>
-            <p class="company">Headstarter AI</p>
-            <p class="timeline-date">Jul 2024 - Aug 2024</p>
-            <p>Contributed to inventory tracking tools using Firebase and React, implemented AWS Bedrock chatbots, and gained experience with CI/CD workflows.</p>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Software Engineer Fellow</h3>
+              <p class="company">Headstarter AI</p>
+              <p class="timeline-date">Jul 2024 - Aug 2024</p>
+              <p>Contributed to inventory tracking tools using Firebase and React, implemented AWS Bedrock chatbots, and gained experience with CI/CD workflows.</p>
+            </div>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <h3>Software Engineer Intern</h3>
-            <p class="company">Life Stages</p>
-            <p class="timeline-date">May 2024 - Jul 2024</p>
-            <p>Developed REST endpoints using Node.js/Express.js, fixed API bugs, created documentation, and learned about DevOps workflows.</p>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Software Engineer Intern</h3>
+              <p class="company">Life Stages</p>
+              <p class="timeline-date">May 2024 - Jul 2024</p>
+              <p>Developed REST endpoints using Node.js/Express.js, fixed API bugs, created documentation, and learned about DevOps workflows.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-card">
-        <div class="contact-header">
-          <h3>Contact Information</h3>
-          <p>Feel free to reach out for collaboration opportunities or job inquiries!</p>
-        </div>
-        <div class="contact-details">
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <div class="contact-info">
-              <h4>Email</h4>
-              <a href="mailto:davidhsongg@gmail.com">davidhsongg@gmail.com</a>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-card">
+          <div class="contact-header">
+            <h3>Contact Information</h3>
+            <p>Feel free to reach out for collaboration opportunities or job inquiries!</p>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <div class="contact-info">
-              <h4>Phone</h4>
-              <a href="tel:6692361331">(669) 236-1331</a>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-info">
+                <h4>Email</h4>
+                <a href="mailto:davidhsongg@gmail.com">davidhsongg@gmail.com</a>
+              </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">🔗</div>
-            <div class="contact-info">
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">linkedin.com/in/davidthesong</a>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-info">
+                <h4>Phone</h4>
+                <a href="tel:6692361331">(669) 236-1331</a>
+              </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">💻</div>
-            <div class="contact-info">
-              <h4>GitHub</h4>
-              <a href="https://github.com/hanbit0218" target="_blank">github.com/hanbit0218</a>
+            <div class="contact-item">
+              <div class="contact-icon">🔗</div>
+              <div class="contact-info">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">linkedin.com/in/davidthesong</a>
+              </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">🌐</div>
-            <div class="contact-info">
-              <h4>Website</h4>
-              <a href="https://dsong.bio" target="_blank">dsong.bio</a>
+            <div class="contact-item">
+              <div class="contact-icon">💻</div>
+              <div class="contact-info">
+                <h4>GitHub</h4>
+                <a href="https://github.com/hanbit0218" target="_blank">github.com/hanbit0218</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div class="contact-info">
+                <h4>Website</h4>
+                <a href="https://dsong.bio" target="_blank">dsong.bio</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -237,6 +237,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged project image">
+  </div>
 
   <script src="js/script.js"></script>
 </body>
