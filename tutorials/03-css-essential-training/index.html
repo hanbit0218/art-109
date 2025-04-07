@@ -3,103 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="David Song - Software Developer, Student and Artist showcasing creative projects and technical skills">
-  <meta name="keywords" content="David Song, portfolio, software developer, artist, student, web development">
-  <title>David Song | Software Developer</title>
+  <meta name="description" content="David Song - Software Developer, Student and Artist">
+  <meta name="keywords" content="David Song, portfolio, software developer, React, JavaScript">
+  <title>David Song | Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav id="main-nav">
+  <!-- Navigation -->
+  <header class="header">
     <div class="container">
-      <div class="logo">DS</div>
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-toggle">🌙</button>
+      <nav class="navbar">
+        <a href="index.html" class="logo">DS</a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-item">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="resume.html" class="nav-item">Resume</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
     </div>
-  </nav>
+  </header>
 
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-content">
         <h1>David <span>Song</span></h1>
         <h2>Software Developer & Creative Thinker</h2>
         <p>Building digital experiences that blend technology with artistic vision</p>
-        <div class="hero-cta">
+        <div class="buttons">
           <a href="#projects" class="btn primary-btn">View My Work</a>
-          <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
       </div>
       <div class="hero-image">
-        <div class="image-container">
-          <img src="images/profile.jpg" alt="David Song" id="profile-image">
-        </div>
+        <img src="images/profile.jpg" alt="David Song">
       </div>
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-        <div class="underline"></div>
-      </div>
+      <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>I'm a creative thinker with a passion for both technology and the arts. Currently pursuing a B.S. in Computer Science at San José State University, I combine technical expertise with artistic vision to create meaningful digital experiences.</p>
-          
-          <div class="bio-toggle" id="bio-toggle">Read More</div>
-          
-          <div class="bio-extended" id="bio-extended">
-            <p>My interests include exploring archives through a techno/socio/cultural lens, particularly in relation to critical fabulation and imaginary archives. I'm always looking for ways to combine creativity with problem-solving, both in programming and in artistic endeavors.</p>
-            
-            <p>I enjoy drawing as a way to explore ideas visually, whether for UI designs or conceptual projects. This multidisciplinary approach allows me to bring unique perspectives to my software development work.</p>
-          </div>
+          <p>I'm a Computer Science student at San José State University with a passion for web development and creating user-centered digital experiences. I specialize in building full-stack applications using modern JavaScript frameworks and libraries.</p>
+          <p>My approach combines technical expertise with creative thinking to develop solutions that are both functional and visually appealing. I'm particularly interested in creating responsive web applications that provide seamless experiences across all devices.</p>
         </div>
-        
         <div class="skills">
           <h3>Technical Skills</h3>
-          <div class="skill-groups">
-            <div class="skill-group">
-              <h4>Languages</h4>
+          <div class="skill-container">
+            <div class="skill-category">
+              <h4>Programming</h4>
               <ul>
+                <li>JavaScript (ES6+)</li>
+                <li>TypeScript</li>
+                <li>HTML5/CSS3</li>
                 <li>Python</li>
-                <li>JavaScript</li>
                 <li>Java</li>
                 <li>SQL</li>
-                <li>C++</li>
               </ul>
             </div>
-            <div class="skill-group">
+            <div class="skill-category">
               <h4>Frameworks</h4>
               <ul>
                 <li>React</li>
                 <li>Node.js</li>
-                <li>Express</li>
+                <li>Express.js</li>
                 <li>Next.js</li>
-                <li>Django</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h4>Tools</h4>
-              <ul>
-                <li>Git</li>
-                <li>Docker</li>
-                <li>Firebase</li>
-                <li>AWS</li>
+                <li>Tailwind CSS</li>
                 <li>MongoDB</li>
               </ul>
             </div>
@@ -109,68 +87,63 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
-      <div class="section-header">
-        <h2>Featured Projects</h2>
-        <div class="underline"></div>
-      </div>
+      <h2 class="section-title">Featured Projects</h2>
       <div class="project-grid">
-        <div class="project-card" id="project1">
-          <div class="project-img">
-            <img src="images/hydrosense-500px.jpg" alt="HydroSense Project">
-          </div>
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="images/zaiku.jpg" alt="Zaiku Project">
           <div class="project-info">
-            <h3>HydroSense</h3>
-            <p>An IoT-based dashboard for real-time soil moisture monitoring and analytics.</p>
-            <div class="project-tech">
-              <span>Next.js</span>
+            <h3>Zaiku</h3>
+            <p>A full-stack e-commerce platform for Asian-inspired fashion with features like shopping cart, search functionality, and secure checkout.</p>
+            <div class="project-tags">
               <span>React</span>
               <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Express</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hanbit0218/zaiku.git" target="_blank" class="btn small-btn">GitHub</a>
+              <a href="https://www.zaikuofficial.com/" target="_blank" class="btn small-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="images/promptwave.jpg" alt="PromptWave Project">
+          <div class="project-info">
+            <h3>PromptWave</h3>
+            <p>A React-based chatbot application leveraging Hugging Face AI models, enabling users to interact with different language models.</p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>Express.js</span>
+              <span>Hugging Face API</span>
+              <span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hanbit0218/promptwave" target="_blank" class="btn small-btn">GitHub</a>
+              <a href="https://promptwave-frontend.vercel.app/" target="_blank" class="btn small-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="images/hydrosense-500px.jpg" alt="HydroSense Project">
+          <div class="project-info">
+            <h3>HydroSense</h3>
+            <p>An IoT-based dashboard for SJSU Community Garden's soil moisture monitoring system with data visualization and export capabilities.</p>
+            <div class="project-tags">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>Tailwind CSS</span>
               <span>Firebase</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank" class="btn small-btn">View Code</a>
-              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card" id="project2">
-          <div class="project-img">
-            <img src="images/office-banner.jpg" alt="Sales Forecast Project">
-          </div>
-          <div class="project-info">
-            <h3>Sales Forecast</h3>
-            <p>A sales forecasting model using Python and Scikit-learn for inventory optimization.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Pandas</span>
-              <span>NumPy</span>
-              <span>Scikit-learn</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/hanbit0218/sales_forecast.git" target="_blank" class="btn small-btn">View Code</a>
-              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="project-card" id="project3">
-          <div class="project-img">
-            <img src="images/office.jpg" alt="Energy Dashboard Project">
-          </div>
-          <div class="project-info">
-            <h3>Energy Dashboard</h3>
-            <p>A backend solution to process energy data, enabling real-time forecasting and analytics.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>TensorFlow</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/hanbit0218/energy_dashboard.git" target="_blank" class="btn small-btn">View Code</a>
-              <a href="#" class="btn small-btn demo-btn">Live Demo</a>
             </div>
           </div>
         </div>
@@ -178,144 +151,92 @@
     </div>
   </section>
 
-  <section id="resume" class="resume">
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
     <div class="container">
-      <div class="section-header">
-        <h2>Experience & Education</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="resume-content">
-        <div class="resume-download">
-          <a href="david_song_resume.pdf" class="btn primary-btn" target="_blank">Download Full Resume</a>
+      <h2 class="section-title">Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Software Engineer Fellow</h3>
+            <p class="company">Headstarter AI</p>
+            <p class="timeline-date">Jul 2024 - Aug 2024</p>
+            <p>Contributed to inventory tracking tools using Firebase and React, implemented AWS Bedrock chatbots, and gained experience with CI/CD workflows.</p>
+          </div>
         </div>
-        
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Jul 2024 - Aug 2024</div>
-            <div class="timeline-content">
-              <h3>Software Engineer Fellow</h3>
-              <h4>Headstarter AI</h4>
-              <p>Designed and deployed a scalable inventory-management system and AI-powered chatbot.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">May 2024 - Jul 2024</div>
-            <div class="timeline-content">
-              <h3>Software Engineer Intern</h3>
-              <h4>Life Stages</h4>
-              <p>Engineered RESTful APIs in Node.js and Express.js to analyze user behavior.</p>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">Expected Dec 2025</div>
-            <div class="timeline-content">
-              <h3>B.S., Computer Science</h3>
-              <h4>San José State University</h4>
-              <p>Coursework: Object-Oriented Programming, Data Structures, AI, Machine Learning</p>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Software Engineer Intern</h3>
+            <p class="company">Life Stages</p>
+            <p class="timeline-date">May 2024 - Jul 2024</p>
+            <p>Developed REST endpoints using Node.js/Express.js, fixed API bugs, created documentation, and learned about DevOps workflows.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <div class="section-header">
-        <h2>Get In Touch</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-card">
+        <div class="contact-header">
           <h3>Contact Information</h3>
-          <p>Feel free to reach out for collaboration opportunities or just to say hello!</p>
-          <div class="contact-methods">
-            <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📱</div>
-              <div class="contact-details">
-                <h4>Phone</h4>
-                <a href="tel:6692361331">(669) 236-1331</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">🔗</div>
-              <div class="contact-details">
-                <h4>Social</h4>
-                <div class="social-links">
-                  <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">LinkedIn</a>
-                  <a href="https://github.com/hanbit0218" target="_blank">GitHub</a>
-                </div>
-              </div>
+          <p>Feel free to reach out for collaboration opportunities or job inquiries!</p>
+        </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-info">
+              <h4>Email</h4>
+              <a href="mailto:davidhsongg@gmail.com">davidhsongg@gmail.com</a>
             </div>
           </div>
-        </div>
-        
-        <div class="contact-form">
-          <h3>Send a Message</h3>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-info">
+              <h4>Phone</h4>
+              <a href="tel:6692361331">(669) 236-1331</a>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🔗</div>
+            <div class="contact-info">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">linkedin.com/in/davidthesong</a>
             </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💻</div>
+            <div class="contact-info">
+              <h4>GitHub</h4>
+              <a href="https://github.com/hanbit0218" target="_blank">github.com/hanbit0218</a>
             </div>
-            <button type="submit" class="btn primary-btn">Send Message</button>
-          </form>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <div class="contact-info">
+              <h4>Website</h4>
+              <a href="https://dsong.bio" target="_blank">dsong.bio</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">DS</div>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">
-            <img src="images/linkedin.png" alt="LinkedIn">
-          </a>
-          <a href="https://github.com/hanbit0218" target="_blank">
-            <img src="images/github.png" alt="GitHub">
-          </a>
-          <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/instagram.png" alt="Instagram">
-          </a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 David Song. All rights reserved.</p>
+      <p>© 2025 David Song. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/hanbit0218" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
       </div>
     </div>
   </footer>
-
-  <div class="scroll-to-top" id="scroll-to-top">
-    <span>↑</span>
-  </div>
 
   <script src="js/script.js"></script>
 </body>

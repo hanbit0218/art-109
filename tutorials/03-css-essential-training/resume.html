@@ -3,94 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="David Song's resume - Software developer with experience in web development, AI, and design.">
-  <meta name="keywords" content="David Song, resume, software developer, engineering, portfolio, San Jose">
-  <title>Resume | David Song | Student and Artist</title>
+  <title>Resume | David Song</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="resume">
-  <!-- Theme Toggle Button -->
-  <button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
-  
-  <a class="btn download-link" href="david_song_resume.pdf">Download PDF</a>
-  
-  <div class="resume-container">
-    <img src="images/office-banner.jpg" alt="greenery" class="resume-image">
-    <h1>David Song</h1>
-    <h3>Student and Artist</h3>
-    <a class="home-link resume-btn" href="index.html">&lt&lt &nbsp&nbsp&nbspH O M E&nbsp&nbsp&nbsp P A G E</a>
-    
-     <!-- PROJECTS -->
-     <section class="resume-section">
-      <h2>Projects</h2>
-      <p>[ OPTIONAL PARAGRAPH FOR PROJECTS SUMAMRY ]</p>
-
-      <section class="project-item">
-        <img src="images/hydrosense-500px.jpg" srcset="images/hydrosense-1000px.jpg 2x" alt="HydroSense" data-expanded="false">
-        <h3>HydroSense</h3>
-        <ul>
-          <li>Developed an IoT-based dashboard for real-time soil moisture monitoring, enhancing user navigation by 40%</li>
-          <li>Designed both frontend and backend components, enabling real-time analytics through seamless data transmission</li>
-          <li>Improved accuracy of sensor data analytics by 80%, benefiting precision agriculture</li>
-          <li>Tech Stack: Next.js, React, Node.js, Firebase</li>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">DS</a>
+        <ul class="nav-links">
+          <li><a href="index.html#home" class="nav-item">Home</a></li>
+          <li><a href="index.html#about" class="nav-item">About</a></li>
+          <li><a href="index.html#projects" class="nav-item">Projects</a></li>
+          <li><a href="resume.html" class="nav-item active">Resume</a></li>
+          <li><a href="index.html#contact" class="nav-item">Contact</a></li>
         </ul>
-        <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank">Link</a>
-      </section>
-    </section>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- WORK EXPERIENCE -->
-    <section class="resume-section">
-      <h2>Work Experience</h2>
-      <p>[ OPTIONAL PARAGRAPH FOR WORK EXPERIENCE SUMMARY ]</p>
-
-      <section>
-        <h3>Software Engineer Intern</h3>
-        <p>Life Stages</p>
-        <p>May 2024 - Jul 2024</p>
-        <ul>
-          <li>Engineered RESTful APIs in Node.js and Express.js to analyze user behavior, improving content personalization and retention rates by 20%</li>
-          <li>Collaborated with DevOps engineers to implement CI/CD pipelines, reducing deployment errors by 30%</li>
-          <li>Supported backend services that facilitated seamless data communication across platforms</li>
-          <li>Tech Stack: Node.js, Express.js, RESTful APIs, Git, CI/CD</li>
-        </ul>
-      </section>
-    </section>
-
-    <!-- EDUCATION & CERTIFICATION -->
-    <section class="resume-section">
-      <h2>Education</h2>
-      <p>[ OPTIONAL PARAGRAPH FOR EDUCATION SUMMARY ]</p>
-
-      <section>
-        <h3>San José State University</h3>
-        <p>B.S., Computer Science</p>
-        <p>Expected Dec 2025</p>
-        <ul>
-          <li>Relevant Coursework: Object-Oriented Programming, Operating Systems, Data Structures, Database Management Systems</li>
-          <li>Artificial Intelligence, Machine Learning, Formal Languages, Information Security, Programming Paradigms</li>
-        </ul>
-      </section>
-    </section>
-  </div>
+  <!-- Resume Content -->
+  <section class="resume-page">
+    <div class="container">
+      <div class="resume-header">
+        <h1>David Song</h1>
+        <div class="resume-contact">
+          <p>
+            <a href="mailto:davidhsongg@gmail.com">davidhsongg@gmail.com</a> | 
+            <a href="tel:6692361331">(669) 236-1331</a> | 
+            <a href="https://linkedin.com/in/davidthesong" target="_blank">linkedin.com/in/davidthesong</a> | 
+            <a href="https://github.com/hanbit0218" target="_blank">github.com/hanbit0218</a> | 
+            <a href="https://dsong.bio" target="_blank">dsong.bio</a>
+          </p>
+        </div>
+        <a href="david_song_resume.pdf" class="btn primary-btn resume-btn" download>Download Resume PDF</a>
+      </div>
+      
+      <div class="resume-content">
+        <!-- Education -->
+        <div class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>San José State University</h3>
+              <span class="date">Expected Dec 2025</span>
+            </div>
+            <p class="degree">B.S., Computer Science</p>
+            <p class="location">San José, CA</p>
+            <p><strong>Relevant Coursework:</strong> Object-Oriented Programming, Operating Systems, Data Structures, Database Management Systems, Artificial Intelligence, Machine Learning, Formal Languages, Information Security, Programming Paradigms</p>
+          </div>
+        </div>
+        
+        <!-- Experience -->
+        <div class="resume-section">
+          <h2>Experience</h2>
+          
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>Software Engineer Fellow</h3>
+              <span class="date">Jul 2024 - Aug 2024</span>
+            </div>
+            <p class="company">Headstarter AI</p>
+            <ul>
+              <li>Contributed to a team project creating a basic inventory tracking tool using Firebase for data storage and React for the frontend UI</li>
+              <li>Implemented a simple chatbot using pre-built AWS Bedrock templates and followed tutorials to host it on an AWS EC2 instance</li>
+              <li>Participated in DevOps meetings and helped test Jenkins deployment pipelines, gaining experience with Git-based CI/CD workflows in a production environment</li>
+              <li><strong>Tech Stack:</strong> JavaScript, React, Firebase, AWS (EC2, Bedrock, IAM), Git, GitHub</li>
+            </ul>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>Software Engineer Intern</h3>
+              <span class="date">May 2024 - Jul 2024</span>
+            </div>
+            <p class="company">Life Stages</p>
+            <ul>
+              <li>Developed REST endpoints using Node.js and Express.js to capture user engagement metrics, contributing to the analytics dashboard</li>
+              <li>Participated in DevOps meetings and helped test deployment scripts, learning about CI/CD workflows in a production environment</li>
+              <li>Fixed 8 minor bugs in the API codebase and created documentation for backend services under senior developer supervision</li>
+              <li><strong>Tech Stack:</strong> Node.js, Express.js, RESTful APIs, Git, Jenkins</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Projects -->
+        <div class="resume-section">
+          <h2>Projects</h2>
+          
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>Zaiku</h3>
+              <span class="date">Jan 2025 - Apr 2025</span>
+            </div>
+            <p class="project-link">
+              <a href="https://github.com/hanbit0218/zaiku.git" target="_blank">github.com/hanbit0218/zaiku.git</a> | 
+              <a href="https://www.zaikuofficial.com/" target="_blank">www.zaikuofficial.com</a>
+            </p>
+            <ul>
+              <li>Built a full-stack e-commerce platform for Asian-inspired fashion using React, Node.js/Express, and MongoDB with JWT authentication</li>
+              <li>Implemented responsive UI components including shopping cart with localStorage persistence, Elastic Search-based product suggestions, and Stripe-integrated secure checkout process</li>
+              <li>Designed and consumed RESTful APIs for user management, product catalog, and order processing using Axios and context-based state management</li>
+              <li><strong>Tech Stack:</strong> React, JavaScript, Node.js, Express, MongoDB with Mongoose ODM, JWT Authentication with refresh token rotation, Google OAuth, RESTful API, Context API</li>
+            </ul>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>PromptWave</h3>
+              <span class="date">Aug 2024 - Oct 2024</span>
+            </div>
+            <p class="project-link">
+              <a href="https://github.com/hanbit0218/promptwave" target="_blank">github.com/hanbit0218/promptwave</a> | 
+              <a href="https://promptwave-frontend.vercel.app/" target="_blank">promptwave-frontend.vercel.app</a>
+            </p>
+            <ul>
+              <li>Created a React-based chatbot application that leverages free Hugging Face AI models, enabling users to interact with 3 different language models</li>
+              <li>Engineered a responsive UI with styled-components for seamless experience across mobile and desktop devices</li>
+              <li>Configured an Express backend server with Redis caching to handle API communication, maintaining conversation history for context-aware responses</li>
+              <li><strong>Tech Stack:</strong> React, Node.js, Express.js, Hugging Face API, styled-components, React Router, Vercel</li>
+            </ul>
+          </div>
+          
+          <div class="resume-item">
+            <div class="resume-header-row">
+              <h3>HydroSense</h3>
+              <span class="date">Oct 2023 - Nov 2023</span>
+            </div>
+            <p class="project-link">
+              <a href="https://github.com/hanbit0218/HydroSense.git" target="_blank">github.com/hanbit0218/HydroSense.git</a>
+            </p>
+            <ul>
+              <li>Led a frontend team of 5 developers in creating an IoT-based dashboard for SJSU Community Garden's soil moisture monitoring system</li>
+              <li>Developed responsive React components to visualize sensor data, integrating Google Sheets API to allow gardeners to export and analyze environmental data</li>
+              <li>Created 3 informational pages with responsive design using Next.js and Tailwind CSS to enhance user experience across both mobile and desktop devices</li>
+              <li><strong>Tech Stack:</strong> Next.js, React, JavaScript, Tailwind CSS, Firebase, Google API</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="resume-section">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4>Programming & Languages</h4>
+              <p>JavaScript (ES6+), TypeScript, HTML5/CSS3, Python, Java, SQL (PostgreSQL, MySQL)</p>
+            </div>
+            <div class="skill-group">
+              <h4>Frameworks & Libraries</h4>
+              <p>React, Node.js, Express.js, Next.js, Firebase, MongoDB/Mongoose, JWT, Redux/Context API, styled-components, Tailwind CSS, Hugging Face Transformers, OAuth 2.0, React Router, Axios, Jest</p>
+            </div>
+            <div class="skill-group">
+              <h4>Infrastructure & Tools</h4>
+              <p>Git (feature branching, PR workflows), GitHub Actions, RESTful API design, AWS (EC2, Bedrock, IAM), MongoDB Atlas, Firebase, Vercel, Jenkins, Google Cloud APIs, Agile/Scrum methodology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer id="footer">
-    <p>© 2025 by David Song |&nbsp; <a href="mailto:david.song@sjsu.edu">david.song@sjsu.edu</a></p>
-    <ul class="socials">
-      <li>
-        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">
-          <img src="images/linkedin.png" alt="My LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src="images/instagram.png" alt="My Instagram">
-        </a>
-        <a href="https://discord.com/" target="_blank">
-          <img src="images/discord.png" alt="My Discord">
-        </a>
-      </li>
-    </ul>
+  <footer>
+    <div class="container">
+      <p>© 2025 David Song. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/davidthesong/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/hanbit0218" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
