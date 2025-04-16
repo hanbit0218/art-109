@@ -19,11 +19,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  color: var(--dark);
-  background-color: var(--light);
-  padding-top: 70px;
+  margin: 0;
+  padding: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 0, 128);
+  background-color: #111;
+  overflow-x: hidden;
 }
 
 .container {
@@ -938,4 +939,23 @@ footer {
 /* Ensure content is still readable by increasing contrast */
 h1, h2, h3, h4, p, li {
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none; /* Allow scrolling through the canvas */
+}
+
+.spacer {
+  height: 200vh; /* Adjust this based on how much content you have */
+}
+
+header {
+  position: relative;
+  z-index: 1; /* Ensure text is above the canvas */
 }
