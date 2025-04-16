@@ -82,7 +82,7 @@ a:hover {
   top: 0 !important;
   left: 0 !important;
   width: 100% !important;
-  background: linear-gradient(to right, var(--primary-dark), var(--primary)) !important;
+  background: linear-gradient(to right, rgba(42, 107, 61, 0.8), rgba(60, 132, 83, 0.8)) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
   z-index: 1000 !important;
 }
@@ -191,7 +191,7 @@ a:hover {
 
 .hero {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,245,245,0.8));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -231,7 +231,7 @@ a:hover {
 
 .about {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,245,245,0.75));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -270,7 +270,7 @@ a:hover {
 
 .projects {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(245,245,245,0.85), rgba(255,255,255,0.75));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
 }
 
@@ -281,7 +281,7 @@ a:hover {
 }
 
 .project-card {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -331,7 +331,7 @@ a:hover {
 
 .experience {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,245,245,0.75));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
 }
 
@@ -370,7 +370,7 @@ a:hover {
 }
 
 .timeline-content {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -393,14 +393,14 @@ a:hover {
 
 .contact {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(245,245,245,0.85), rgba(255,255,255,0.75));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
 }
 
 .contact-card {
   max-width: 700px;
   margin: 0 auto;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -459,7 +459,7 @@ a:hover {
 }
 
 footer {
-  background: linear-gradient(to right, var(--primary-dark), var(--primary)) !important;
+  background: linear-gradient(to right, rgba(42, 107, 61, 0.8), rgba(60, 132, 83, 0.8)) !important;
   padding: 30px 0;
   text-align: center;
   color: white !important;
@@ -481,7 +481,7 @@ footer {
 
 .resume-page {
   padding: 80px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,245,245,0.75));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
 }
 
@@ -617,7 +617,7 @@ footer {
 }
 
 .skill-group {
-  background-color: var(--light);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -881,6 +881,28 @@ img {
   width: 100%;
   height: 100%;
   z-index: -1;
+  opacity: 0.4; /* Make the p5 background more transparent */
+}
+
+#three-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Below the p5 container */
+  pointer-events: none;
+}
+
+/* Style for the GUI */
+.dg.ac {
+  z-index: 1001 !important; /* Ensure GUI is above all content */
+}
+
+/* Make GUI more visible */
+.dg.main.a {
+  margin-right: 20px;
+  margin-top: 70px; /* Below the header */
 }
 
 .header, .content-wrapper, footer, .lightbox {
@@ -889,25 +911,31 @@ img {
 }
 
 .hero, .about, .projects, .experience, .contact, .resume-page {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.6) !important;
   border-radius: 8px;
   margin: 20px 0;
   position: relative;
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(to right, rgba(42, 107, 61, 0.8), rgba(60, 132, 83, 0.8)) !important;
 }
 
 footer {
-  background-color: rgba(245, 245, 245, 0.9);
+  background: linear-gradient(to right, rgba(42, 107, 61, 0.8), rgba(60, 132, 83, 0.8)) !important;
 }
 
-.project-card, .timeline-content, .contact-card {
+.project-card, .timeline-content, .contact-card, .skill-group {
+  background-color: rgba(255, 255, 255, 0.7) !important;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .project-card:hover, .timeline-content:hover, .contact-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Ensure content is still readable by increasing contrast */
+h1, h2, h3, h4, p, li {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }

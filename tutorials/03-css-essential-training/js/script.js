@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
   function setupMobileMenu() {
     const menuToggle = document.createElement('div');
     menuToggle.className = 'menu-toggle';
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const navbar = document.querySelector('.navbar');
     
-    // Only add mobile menu functionality if we're on a small screen
     if (window.innerWidth <= 768) {
       navbar.appendChild(menuToggle);
       
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
       });
       
-      // Close mobile menu when clicking a link
       document.querySelectorAll('.nav-item').forEach(link => {
         link.addEventListener('click', function() {
           menuToggle.classList.remove('active');
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Highlight active nav item based on scroll position
   function setupScrollHighlight() {
     const sections = document.querySelectorAll('section[id]');
     const navItems = document.querySelectorAll('.nav-item');
@@ -54,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', highlightNavItem);
   }
   
-  // Contact form submission
   function setupContactForm() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
@@ -66,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Resume image enlarge
   function setupResumeImages() {
     const resumeImages = document.querySelectorAll('.resume-img');
     if (resumeImages.length > 0) {
@@ -88,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Smooth scrolling for anchor links
   function setupSmoothScrolling() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
@@ -110,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Style change with timer
   function setupStyleTimers() {
     setTimeout(function() {
       const pageTitle = document.querySelector('.hero-content h1');
@@ -120,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, 2000);
     
-    // Style change with click
     const header = document.querySelector('.header');
     if (header) {
       header.addEventListener('click', function() {
@@ -130,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Toggle visibility on project images
   function setupImageToggles() {
     const projectImages = document.querySelectorAll('.project-card img');
     projectImages.forEach(img => {
@@ -145,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add hover effect using JS
   function setupLogoHover() {
     const logo = document.querySelector('.logo');
     if (logo) {
@@ -159,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Add animation to project cards
   function setupProjectCards() {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
@@ -168,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Lightbox functionality
   function setupLightbox() {
     const projectImages = document.querySelectorAll('.project-card img');
     const lightbox = document.getElementById('lightbox');
@@ -200,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Initialize all functions
   setupMobileMenu();
   setupScrollHighlight();
   setupContactForm();
